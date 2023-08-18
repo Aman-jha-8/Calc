@@ -1,0 +1,92 @@
+/* Add your CSS styles here */
+body{
+    background: linear-gradient(69deg , rgb(203, 111, 111) , rgb(183, 201, 82));
+    height: 100vh;
+}
+
+.calculator {
+    border-radius: 5px;
+    width: 300px;
+    background-color: #3f3f3f;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    padding: 10px;
+    box-shadow: 7px 10px 11px black;
+    border-radius: 5px;
+  }
+
+  .display {
+    text-align: right;
+    margin-bottom: 10px;
+    margin-right: 3%;
+
+  }
+
+  .display input {
+    width: 100%;
+    padding: 5px;
+    font-size: 24px;
+    border: none;
+    background-color: rgb(127, 255, 193);
+
+  }
+
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  button {
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  button:hover {
+    background-color: #2a4846;
+  }
+
+  button:active {
+    transform: scale(.95);
+    box-shadow: none;
+  }
+
+.cal-hea{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.cal-heea{
+    color: #fffcfc;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+button{
+    background-color: rgb(125, 109, 109);
+    color: aliceblue;
+
+    box-shadow: 0 7px 7px black;
+    margin: 10px;
+}
+
+.buttons{
+    background-color: rgb(120, 120, 120);
+}
+
+.heading{
+    text-decoration: underline;
+}
+
+.hh{
+    text-align: center;
+}
+
+#result{
+    overflow: scroll;
+}
