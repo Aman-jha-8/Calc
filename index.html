@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta author="Aman Jha" date="20 August 2023">
   <link rel="stylesheet" href="styles.css">
   <title>Scientific Calculator</title>
 </head>
@@ -10,6 +11,7 @@
     <div class="conatainer" id="parent">
         <div class="hh">
             <h1 class="heading">Scientific Calculator</h1>
+            <h3 id ="timer" class="tag">S-V.P.A.M</h3>
         </div>
   <div class="calculator">
     <div class="cal-hea">
@@ -44,6 +46,64 @@
       </div>
   </div>
 </div>
+<footer class="foot py-5">
+  <div class="foot-container">
+          <!-- About Section -->
+          <div class="item1">
+              <h5>About Aman Jha Calculator</h5>
+              <p>Founded in 2023 by Aman Jha, our platform offers calcutions of various large number with very simple to use </p>
+          </div>
+
+          <!-- Contact Information -->
+          <div class="item2">
+              <h5>Contact Information</h5>
+              <ul class="list-unstyled">
+                  <li>Email: aman.jha_cs21@gla.ac.in</li>
+                  <li>Phone: +91 8941951465</li>
+                  <li>Address: 123 calcutions Lane, CalculateCity, CalcLand</li>
+              </ul>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="item3">
+              <h5>Quick Links</h5>
+              <ul class="list-unstyled">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Service</a></li>
+                  <li><a href="#">Contact Us</a></li>
+              </ul>
+          </div>
+  </div>
+  <!-- Copyright Information -->
+  <div class="foot-copy">
+    <div class="col text-center">
+        <p class="mb-0">© 2023 Aman Jha Calculator. All rights reserved.</p>
+    </div>
+</div>
+</footer>
   <script src="script.js"></script>
+  <script>
+    function showTime(){
+      var time = new Date();
+      var hour= time.getHours();
+      var zone = ""
+      if(hour >12){
+        zone="P.M"
+      }else{
+        zone="A.M"
+      }
+      hour = hour % 12
+      if(hour%12===0){
+        hour = 12
+      }
+
+      var minutes = time.getMinutes();
+      var seconds = time.getSeconds();
+        var completeTime = hour+":"+minutes+":"+seconds + " " +zone;
+      document.getElementById("timer").innerHTML= completeTime;
+
+    }
+setInterval("showTime()",1000);
+  </script>
 </body>
 </html>

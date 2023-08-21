@@ -1,3 +1,7 @@
+// Author : Aman Jha
+// Date   : 20 August 2023
+// Purpose: To implement the functions of a Calcutor.
+
 let currentInput = "";
 
 function clearResult() {
@@ -6,7 +10,7 @@ function clearResult() {
 }
 
 function appendChar(char) {
-  if (char === "C" || char === "AC" ) {
+  if (char === "AC" ) {
     clearResult();
   } else {
     currentInput += char;
@@ -38,6 +42,13 @@ function calculateLog() {
   document.getElementById("result").value = currentInput;
 }
 
+function handleBackspace() {
+  if (currentInput.length > 0) {
+    currentInput = currentInput.slice(0, -1);
+    document.getElementById("result").value = currentInput;
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function() {
   const buttons = document.querySelectorAll(".buttons button");
   buttons.forEach(button => {
@@ -58,9 +69,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
   document.addEventListener("keydown", function(event) {
     const key = event.key;
-    if (/[0-9+\-*/.={AC}+]/.test(key)) {
+    if (/[0-9+\-*/.={AC}+()]/.test(key)) {
       event.preventDefault();
-      if (key === "=" || key === "Enter") {
+      if (key === "=") {
         calculate();
       } else {
         appendChar(key);
@@ -72,6 +83,12 @@ document.addEventListener("DOMContentLoaded", function() {
     const key = event.key;
     if (key === "Enter") {
       calculate();
+    }else if (key === "Backspace") {
+      handleBackspace();
+    }else if (key === "Delete") {
+      clearResult();
     }
   });
 });
+
+

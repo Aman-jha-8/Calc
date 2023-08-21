@@ -1,9 +1,9 @@
-/* Add your CSS styles here */
-body{
-    background: linear-gradient(69deg , rgb(203, 111, 111) , rgb(183, 201, 82));
-    height: 100vh;
-}
 
+/*
+   Author : Aman Jha
+   Date   : 20 August 2023
+   Applied: Css property to Scientific Calcutor
+*/
 .calculator {
     border-radius: 5px;
     width: 300px;
@@ -89,4 +89,54 @@ button{
 
 #result{
     overflow: scroll;
+}
+
+@media screen and (min-width: 600px) {
+  body{
+    background: linear-gradient(69deg , rgb(203, 111, 111) , rgb(183, 201, 82));
+    height: 120vh;
+}
+  .foot-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 50px;
+    margin-left: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+  }
+
+  .foot-copy{
+    align-items: center;
+    text-align: center;
+  }
+
+  ul{
+    list-style: none;
+  }
+  h5{
+    color: rgb(3, 16, 16);
+    font-size: 20px;
+
+  }
+
+}
+
+@media screen and (max-width : 599px) {
+  body{
+    background: linear-gradient(rgb(225, 119, 119),rgb(255, 119, 196));
+    height: 150vh;
+    margin: 0;
+    padding: 0;
+  }
+  ul{
+    list-style: none;
+  }
+  .foot-container , ul , a , .col p  {
+    color: rgb(1, 0, 10);
+
+  }
+  .foot-container , .foot-copy{
+    margin-left: 1rem;
+  }
+
 }
